@@ -1,0 +1,321 @@
+.App {
+  text-align: center;
+}
+
+.header-image-text-welcome {
+  margin-top: 18%;
+  color: white;
+  position: absolute;
+  left: 20%;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.h1-header{
+  width: 135% !important;
+  line-height: 2.1 !important;
+}
+
+.header-image-text-one {
+  margin-top: 27%;
+  color: white;
+  position: absolute;
+  left: 20%;
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.footer-text{
+  color: white;
+}
+
+.footer-icons{
+  width: 90%;
+  margin-top: 20px;
+}
+
+.header-image-text-two {
+  margin-top: 29%;
+  color: white;
+  position: absolute;
+  left: 20%;
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.text-green{
+  color: green;
+}
+
+.text-blue{
+  color: #213b71;
+}
+
+.text-yellow{
+  color: #ffc107;
+}
+.p{
+  font-weight: bold !important;
+}
+
+.top-left {
+  margin-top: 5%;
+  color: white;
+  position: absolute;
+  left: 7%;
+  font-weight: 700;
+  font-size: small;
+}
+
+.top-left-middle {
+  margin-top: 7%;
+  color: white;
+  position: absolute;
+  left: 7%;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.top-left-middle-one {
+  margin-top: 9%;
+  color: white;
+  position: absolute;
+  left: 7%;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.top-left-button {
+  margin-top: 14%;
+  position: absolute;
+  left: 7%;
+  font-weight: 700;
+}
+
+.top-left-two {
+  margin-top: 5%;
+  color: white;
+  position: absolute;
+  left: 41%;
+  font-weight: 700;
+  font-size: small;
+}
+
+.top-left-two-middle {
+  margin-top: 7%;
+  color: white;
+  position: absolute;
+  left: 41%;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.top-left-middle-two {
+  margin-top: 9%;
+  color: white;
+  position: absolute;
+  left: 41%;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.top-left-two-button {
+  margin-top: 14%;
+  position: absolute;
+  left: 41%;
+  font-weight: 700;
+}
+
+.top-left-three {
+  margin-top: 5%;
+  color: white;
+  position: absolute;
+  left: 75%;
+  font-weight: 700;
+  font-size: small;
+}
+
+.top-left-three-middle {
+  margin-top: 7%;
+  color: white;
+  position: absolute;
+  left: 75%;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.top-left-middle-three {
+  margin-top: 9%;
+  color: white;
+  position: absolute;
+  left: 75%;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.top-left-three-button {
+  margin-top: 14%;
+  position: absolute;
+  left: 75%;
+  font-weight: 700;
+}
+
+.nav{
+margin-left: 20%;
+}
+
+.nav-link{
+  font-size: 10px;
+  margin-top: 20px;
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  position:'absolute';
+  min-height: 100vh;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-image: url("./assets/header image.jpg");
+}
+
+.paragraph{
+  margin: auto;
+  max-width: 50%;
+}
+
+.bottominput{
+  margin: auto;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.columntextfields {
+  float: left;
+  width: 46%;
+  padding: 10px;
+}
+
+.ourmarket {
+  background-color: #9999990f !important;
+}
+
+.footer-banner {
+  background-color: #213b71 !important;
+}
+
+.form-group {
+  text-align: left !important;
+}
+
+.form-group-right {
+  width: 100% !important;
+}
+
+.form-group-input {
+  text-align: left !important;
+  width: 206% !important;
+}
+
+.row{
+  flex-wrap: nowrap !important;
+}
+
+.button{
+  background-color: #213b71 !important;
+  border-color:  #213b71 !important;
+}
+
+.buttonSubmit{
+  background-color: #213b71 !important;
+  float: right;
+}
+.column_ourmarkets
+{
+  float: left;
+  width: 15%;
+  padding: 5px;
+}
+
+.images {
+width: 70%;
+}
+
+.logoright{
+margin-bottom: -25px !important;
+}
+
+.text-block {
+  position: absolute;
+  left: 0%;
+  width: 40%;
+  margin-top: 18%;
+  background-color: #213b71 !important;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.imagesbottom {
+  width: 75%;
+  }
+
+.images_our_markets {
+  width: 30%;
+  }
+
+.container {
+  width: 100%; /* Maximum width */
+  margin: 0 auto; /* Center it */
+  height: 50%;
+}
+
+.App .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
+.h6{
+  width: 113% !important;
+}
+
+.text{
+  width: 10%;
+  color: #6c757d;
+  font-size: larger;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
