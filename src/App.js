@@ -98,6 +98,7 @@ class App extends React.Component {
         })
             .catch(error => {
                 console.log(error)
+                toast("Details For" + " "+ obj.email +" " +" Not Saved." +" " + error +"" );
             })
     }
 
@@ -106,6 +107,7 @@ class App extends React.Component {
             method: 'GET',
         }).then(response => response.json())
             .then(response => {
+              toast("Updating Table Data." );
                 this.setState({
                     products: response,
                 })
@@ -113,6 +115,7 @@ class App extends React.Component {
             })
             .catch(error => {
                 console.log(error)
+                toast("Table Data Not Updated." +" " + error +"" );
             })
     }
 
