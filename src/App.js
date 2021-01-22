@@ -2,6 +2,8 @@ import './sass/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { Row, Form, Col, Button, Table } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import logoleft from './assets/fullgslogo.png';
 import logoright from './assets/dra-logo.png';
@@ -50,10 +52,11 @@ class App extends React.Component {
             method: 'GET',
         }).then(response => response.json())
             .then(response => {
-                console.log(response)
+              toast("Welcome Riaan.");
                 this.setState({
                     products: response,
                 })
+                toast("Loading Assessment ...");
             })
             .catch(error => {
                 console.log(error)
@@ -90,6 +93,7 @@ class App extends React.Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(obj)
         }).then(response => {
+           toast("Details Saved Successfully For" + " "+ obj.email +"" );
             this.onFormSubmit();
         })
             .catch(error => {
@@ -102,11 +106,10 @@ class App extends React.Component {
             method: 'GET',
         }).then(response => response.json())
             .then(response => {
-                console.log(response)
-                debugger
                 this.setState({
                     products: response,
                 })
+                this.state = this.initialState;
             })
             .catch(error => {
                 console.log(error)
@@ -123,7 +126,7 @@ class App extends React.Component {
             <div className="App">
                 <Row>
                     <Col sm={12}>
-                        <div className="logoright"><img src={logoright} alt="" style={{ width: 165, marginBottom: -10, marginLeft: 695 }} /></div>
+                        <div className="logoright"><img src={logoright} alt="" style={{ width: 165, marginBottom: -10, marginLeft: 765 }} /></div>
                         <ul className="nav">
                             <li className="nav-item">
                                 <div className="text-block">
@@ -242,6 +245,7 @@ class App extends React.Component {
                     </Col>
                 </Row>
                 <br></br>
+                <ToastContainer />
                 <Row>
                     <Col sm={1}>
                     </Col>
@@ -257,6 +261,7 @@ class App extends React.Component {
                             <Form.Group controlId="name">
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control
+                                    required
                                     type="text"
                                     name="name"
                                     value={this.state.name}
@@ -267,6 +272,7 @@ class App extends React.Component {
                             <Form.Group controlId="email">
                                 <Form.Label>Email Address</Form.Label>
                                 <Form.Control
+                                    required
                                     type="email"
                                     name="email"
                                     value={this.state.email}
@@ -277,7 +283,8 @@ class App extends React.Component {
                             <Form.Group controlId="number">
                                 <Form.Label>Phone Number</Form.Label>
                                 <Form.Control
-                                    type="text"
+                                    required
+                                    type="tel"
                                     name="number"
                                     value={this.state.number}
                                     onChange={this.handleChange}
@@ -289,6 +296,7 @@ class App extends React.Component {
                                     <Form.Group controlId="startdate">
                                         <Form.Label>Start Date</Form.Label>
                                         <Form.Control
+                                            required
                                             type="date"
                                             name="startdate"
                                             value={this.state.startdate}
@@ -300,6 +308,7 @@ class App extends React.Component {
                                     <Form.Group controlId="enddate">
                                         <Form.Label>End Date</Form.Label>
                                         <Form.Control
+                                            required
                                             type="date"
                                             name="enddate"
                                             value={this.state.enddate}
