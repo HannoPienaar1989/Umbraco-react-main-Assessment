@@ -3,3 +3,4 @@
 [0121/023028.340:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
 [0121/051029.010:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
 [0121/110611.400:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0122/113125.306:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Hanno\AppData\Local\AVG\Browser\User Data\Crashpad\attachments\8f367e6c-6e34-410b-8fea-3d7131d3f980: The system cannot find the path specified. (0x3)
