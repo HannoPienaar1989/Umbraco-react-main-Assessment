@@ -1,10 +1,9 @@
 import './sass/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import { Row, Form, Col, Button, Table } from 'react-bootstrap';
+import {Container, Row, Form, Col, Button, Table } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import logoleft from './assets/fullgslogo.png';
 import logoright from './assets/dra-logo.png';
 import services from './assets/Group 232.jpg';
@@ -74,6 +73,7 @@ class App extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        toast("Saving Data ..." );
         let apiUrl;
         apiUrl = 'http://localhost:3001/api/Tickets';
 
@@ -95,6 +95,11 @@ class App extends React.Component {
         }).then(response => {
            toast("Details Saved Successfully For" + " "+ obj.email +"" );
             this.onFormSubmit();
+            this.state.name = '';
+            this.state.email = '';
+            this.state.number = '';
+            this.state.startdate = '';
+            this.state.enddate = '';
         })
             .catch(error => {
                 console.log(error)
@@ -110,8 +115,9 @@ class App extends React.Component {
               toast("Updating Table Data." );
                 this.setState({
                     products: response,
+                   
                 })
-                this.state = this.initialState;
+               
             })
             .catch(error => {
                 console.log(error)
@@ -125,7 +131,10 @@ class App extends React.Component {
 
         console.log(this.state.products);
 
+
+
         return (
+          <Container>
             <div className="App">
                 <Row>
                     <Col sm={12}>
@@ -414,6 +423,7 @@ class App extends React.Component {
                     </Col>
                 </Row>
             </div>
+            </Container>
         );
     }
 }
