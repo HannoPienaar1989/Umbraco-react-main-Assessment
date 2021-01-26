@@ -71,9 +71,9 @@ class App extends React.Component {
         })
     }
 
-    handleSubmit(event) {
+       handleSubmit(event) {
         event.preventDefault();
-        toast("Saving Data ..." );
+       
         let apiUrl;
         apiUrl = 'http://localhost:3001/api/Tickets';
 
@@ -84,27 +84,36 @@ class App extends React.Component {
             name: this.state.name,
             email: this.state.email,
             number: this.state.number,
-            startDate: new Date(),
-            endDate: new Date()
+            startDate: this.state.startdate,
+            endDate: this.state.enddate
+        }
+        if(this.state.startdate > this.state.enddate)
+        {
+            toast("Start Date must be smaller then End Date" );
+        }
+        else
+        {
+            toast("Saving Data ..." );
+            fetch('http://localhost:3001/api/Tickets/Save', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(obj)
+            }).then(response => {
+               toast("Details Saved Successfully For" + " "+ obj.email +"" );
+                this.onFormSubmit();
+                this.state.name = '';
+                this.state.email = '';
+                this.state.number = '';
+                this.state.startdate = '';
+                this.state.enddate = '';
+            })
+                .catch(error => {
+                    console.log(error)
+                    toast("Details For" + " "+ obj.email +" " +" Not Saved." +" " + error +"" );
+                })
         }
 
-        fetch('http://localhost:3001/api/Tickets/Save', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(obj)
-        }).then(response => {
-           toast("Details Saved Successfully For" + " "+ obj.email +"" );
-            this.onFormSubmit();
-            this.state.name = '';
-            this.state.email = '';
-            this.state.number = '';
-            this.state.startdate = '';
-            this.state.enddate = '';
-        })
-            .catch(error => {
-                console.log(error)
-                toast("Details For" + " "+ obj.email +" " +" Not Saved." +" " + error +"" );
-            })
+       
     }
 
     onFormSubmit() {
