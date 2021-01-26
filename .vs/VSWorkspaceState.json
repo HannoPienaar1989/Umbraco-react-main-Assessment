@@ -1,10 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\node_modules\\node-modules-regexp",
-    "\\node_modules\\node-sass",
-    "\\node_modules\\node-sass\\src\\libsass",
-    "\\node_modules\\node-sass\\src\\libsass\\win"
+    ""
   ],
   "PreviewInSolutionExplorer": false
 }
